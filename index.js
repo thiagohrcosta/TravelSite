@@ -7,8 +7,6 @@ const _ = require("lodash");
 
 const app = express();
 
-let posts =[];
-
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -49,7 +47,7 @@ app.post("/postcontent", function(req, res){
     postCountry: req.body.countryName,
     postprice: req.body.price,
     postCoverImage: req.body.coverImage,
-    posbBackgroundImage: req.body.backgroundImage,
+    postBackgroundImage: req.body.backgroundImage,
     postContent: req.body.content,
     postHotelStar: req.body.hotelStar
   });
@@ -65,8 +63,13 @@ app.get("/posts/:postId", function (req, res) {
 
   Post.findOne({_id: requestedPostId}, function(err, post){
     res.render("cityContent", {
-      postCity: req.body.cityName,
-      postCountry: post.countryName,
+      postCity: post.postCity,
+      postHotelStar: post.postHotelStar,
+      postCountry: post.postCountry,
+      postprice: post.postprice,
+      postCoverImage: post.postCoverImage,
+      postBackgroundImage: post.postBackgroundImage,
+      postContent: post.postContent,
 
     });
   });
