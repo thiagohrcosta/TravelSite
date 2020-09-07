@@ -44,3 +44,6 @@ The post are receive by the backend who fill the post information to data base i
 
 ## How to Run this app?
 Just download this repository, then extract in a folder and run *npn install*, after that, run *nodemon index.js*. The project should be open in **port 3000**.
+
+## See this project running
+You can see this project running on Heroku, just [click here](https://shrouded-retreat-19193.herokuapp.com/)click here
