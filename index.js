@@ -2,8 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const _ = require("lodash");
+
 
 const app = express();
+
+let posts =[];
 
 app.set("view engine", "ejs");
 
@@ -55,6 +59,19 @@ app.post("/postcontent", function(req, res){
     };
   });
 });
+
+app.get("/posts/:postId", function (req, res) {
+  const requestedPostId = req.params.postId;
+
+  Post.findOne({_id: requestedPostId}, function(err, post){
+    res.render("cityContent", {
+      postCity: req.body.cityName,
+      postCountry: post.countryName,
+
+    });
+  });
+});
+
 
 /*
 let port = process.env.PORT;

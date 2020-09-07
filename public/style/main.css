@@ -75,8 +75,9 @@
 .borderCarousel{
   border: solid 1px lightgray;
 }
-.carrosel-filmes{
+.carrousel-filmes{
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 .titleSeries{
   margin-left: 2%;
@@ -88,7 +89,48 @@
 }
 
 .box-cityTitle{
-  margin-top: 2px;
+  margin-top: 10px;
+  padding: 5px;
   font-size: 20px;
   text-align: center;
+}
+
+.postContent{
+  text-align: justify;
+  padding: 0 10px;
+}
+.horizontalLine{
+  width: 50%;
+}
+
+.backgroundPriceHotel{
+  background-color: #9fa5b6;
+
+}
+.hotelStars{
+  background-color:#d6e0f0;
+  text-align: center;
+}
+
+.hotelPrice{
+  text-align: center;
+  width: 100%;
+}
+
+.hotelPrice:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.buttonHotelCheck{
+  width: 100%;
+  background-color:#bbe1fa;
+  border: none;
+  text-transform: uppercase;
+}
+
+.buttonHotelCheck:hover{
+  background-color: #0f4c75;
+  color: white;
 }
