@@ -1,7 +1,7 @@
 
  
 <div class="carrousel-filmes">
-  <h1>Travel through North America
+  <h1 class="titleTravelNorthAmerica">Travel through to the World
   </h1>
   <div class="owl-carousel owl-theme">
     <% posts.forEach(function(post){ %>
@@ -11,7 +11,7 @@
           <img class="box-cityImage" src="<%= post.postCoverImage %>" rs alt="">
           <h1 class="box-cityTitle"><%= post.postCity %> - <%= post.postCountry %></h1>
           <hr class="horizontalLine">
-          <p class="postContent"><%= post.postContent.substring(0,50) + " (...more info)" %></p>
+          <p class="postContent"><%= post.postContent.substring(0,70) + " ... " %></p>
           <div class="row">
             <div class="col-lg-6">
               <p class="hotelPrice">$<%= post.postprice %>,00 / day</p>
@@ -20,14 +20,15 @@
               <p class="hotelStars">Hotel Stars: <%= post.postHotelStar %></p>
             </div>
           </div>
+          <div>
+            <button class="buttonHotelCheck">
+              <a href="/posts/<%= post._id%>"> More Info
+              </a>
+            </button>
+          </div>
         </div>
         
-        <div>
-          <button class="buttonHotelCheck">
-            <a href="/posts/<%= post._id%>"> More Info
-            </a>
-          </button>
-        </div>
+        
         
       </div>
     <% }) %>
