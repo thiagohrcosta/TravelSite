@@ -1,0 +1,19 @@
+
+ 
+<div class="carrousel-filmes">
+  <h1>Travel through North America
+  </h1>
+  <div class="owl-carousel owl-theme">
+    <% posts.forEach(function(post){ %>
+      <div class="item">
+
+        <div class="borderCarousel">
+          <img class="box-cityImage" src="<%= post.postCoverImage %>" rs alt="">
+          <h1 class="box-cityTitle"><%= post.postCity %> - <%= post.postCountry %></h1>
+          <p><%= post.postContent %></p>
+       </div>
+        
+      </div>
+    <% }) %>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<%- include('./baseTemplate/header'); %>
+
+
+<div class="container">
+
+  <div class="row boxAddContent">
+    
+    <div class="col-lg-6">
+      <section class="addContentImg" style="background: url(https://source.unsplash.com/collection/55066664/500x500) no-repeat center center / cover"></section>
+    </div>
+    <div class="col-lg-6">
+
+      <h1>Adding Content</h1>
+      
+      <form action="/postcontent" method="POST">
+      
+        <div class="form-group">
+          
+          <p>City Name:</p>
+          <input type="text" name="cityName">
+      
+          <p>Country:</p>
+          <input type="text" name="countryName">
+      
+          <p>Price per day:</p>
+          <input type="text" name="price">
+      
+          <p>Cover Image url:</p>
+          <input type="text" name="coverImage">
+      
+          <p>Background Image url:</p>
+          <input type="text" name="backgroundImage">
+
+          <p>Content:</p>
+          <input type="text" name="content">
+      
+          <p>Hotel Stars</p>
+          <input type="text" name="hotelStar">
+      
+      
+        </div>
+      
+        <button type="submit">Post Content</button>
+      
+      </form>
+    </div>
+
+
+    
+  </div>
+</div>
+
+
+<%- include('./baseTemplate/footer'); %>

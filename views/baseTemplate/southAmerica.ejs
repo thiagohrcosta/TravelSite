@@ -1,0 +1,60 @@
+<div class="container">
+  <h1 class="tinyCarouselTitle">Travel through South America</h1>
+</div>
+
+
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+        <% posts.forEach(function(post){ %>
+          <img 
+            class="card-img-top tinyCarousel"
+            src="<%= post.postCoverImage %>" 
+            alt="" 
+            srcset="">
+            <div class="card-body">
+              <h4 class="card-title"><%= post.postCity %> - <%= post.postCountry %></h4>
+              <p class="card-text"><%= post.content %></p>
+
+          </div>
+
+         <% }) %>
+        </div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+   
+   
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+
+

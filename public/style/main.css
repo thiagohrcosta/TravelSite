@@ -1,0 +1,94 @@
+.searchCarousel{
+  margin-bottom: -100px;
+}
+.imgCarousel{
+  height: 850px;
+}
+
+.tinyCarouselTitle{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.tinyCarousel{
+  width: 100%;
+  height: 280px;
+}
+
+.tinyCarouselPrice{
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .searchCarousel{
+    margin-bottom: 10px;
+  }
+  .imgCarousel{
+    height: 550px;
+  }
+}
+
+
+/* Box display */
+
+.imageBox{
+  height: 320px;
+  width: 220px;
+}
+
+.addContentImg{
+  width: 100%;
+  height: 100%;
+}
+
+.boxAddContent input{
+  width: 100%;
+}
+
+.boxAddContent{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 5px;
+}
+
+.boxAddContent p{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: -2px;
+}
+
+.boxAddContent button{
+  width: 100%;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: #ea5455;
+  border-radius: 10px;
+  color: white;
+}
+
+.boxAddContent button:hover{
+  background-color: var(--vermelho);
+}
+
+
+/* Carousel */
+
+.borderCarousel{
+  border: solid 1px lightgray;
+}
+.carrosel-filmes{
+  margin-top: 5px;
+}
+.titleSeries{
+  margin-left: 2%;
+}
+.box-cityImage{
+  height: 420px;
+  width: 100%;
+  display: block;
+}
+
+.box-cityTitle{
+  margin-top: 2px;
+  font-size: 20px;
+  text-align: center;
+}
