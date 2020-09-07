@@ -43,4 +43,4 @@ The post are receive by the backend who fill the post information to data base i
 - Deploy application on Heroku;
 
 ## How to Run this app?
-Just download this repository, then extract in a folder and run *npn install*, after that, run *nodemon index.js* the project should be open in **port 3000**.
+Just download this repository, then extract in a folder and run *npn install*, after that, run *nodemon index.js*. The project should be open in **port 3000**.
