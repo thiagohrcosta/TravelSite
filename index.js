@@ -15,7 +15,11 @@ app.use(express.static(__dirname + '/public/js/owl'))
 app.use(express.static("css"));
 app.use(express.static(__dirname + '/css/owl'));
 
-mongoose.connect("mongodb+srv://admin-app:123456app@movieapi.z0kfu.mongodb.net/travelAgency", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin-app:123456app@movieapi.z0kfu.mongodb.net/travelAgency", 
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const postSchemaSouthAmerica = {
   postCity: String,
@@ -27,6 +31,7 @@ const postSchemaSouthAmerica = {
   postHotelStar: String
 }
 
+// Creating collection on Mongo
 const Post = mongoose.model("Post", postSchemaSouthAmerica);
 
 app.get("/", function(req, res){
@@ -58,6 +63,17 @@ app.post("/postcontent", function(req, res){
   });
 });
 
+app.get("/posts", function(req, res){
+  Post.find(function(err, foundItems){
+    if(!err){
+      res.send(foundItems);
+    }
+    else{
+      res.send(err);
+    }
+  })
+})
+
 app.get("/posts/:postId", function (req, res) {
   const requestedPostId = req.params.postId;
 
@@ -74,6 +90,24 @@ app.get("/posts/:postId", function (req, res) {
     });
   });
 });
+
+app.patch("/posts/:postId", function(req, res){
+
+  Post.update(
+    {_id: req.params.postId},
+    {
+     $set: req.body
+    },
+      function(err){
+        if(!err){
+          res.send("Sucessfully updated.");
+        }
+        else{
+          res.send(err);
+        }
+      }
+  );
+})
 
 
 
