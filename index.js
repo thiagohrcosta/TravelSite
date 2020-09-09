@@ -91,7 +91,7 @@ app.get("/posts/:postId", function (req, res) {
   });
 });
 
-app.patch("/posts/:postId", function(req, res){
+app.patch("/posts/edit/:postId", function(req, res){
 
   Post.update(
     {_id: req.params.postId},
