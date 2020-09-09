@@ -11,7 +11,7 @@ Project **BLOG** developed during the BootCamp Web Developer created by **[THE A
   
   
 
-The project was created using Bootstrap 4 as main core to desing responsive layout and allow the fast coding. In the **frontend** was used HTML, CSS and JavaScript to create some interface slideshow and carousel. To suport this frontend interface, was created a **backend** with NodeJs and connected to the database (MongoDB) using mongoose, and finally, the project was **deployed** on Heroku.![TravelAgency2](https://github.com/thiagohrcosta/TravelSite/blob/master/files/travelup8.png?raw=true)
+The project was created using Bootstrap 4 as main core to desing responsive layout and allow the fast coding. In the **frontend** was used HTML, CSS and JavaScript to create some interface slideshow and carousel. To suport this frontend interface, was created a **backend** with NodeJs and connected to the database (MongoDB) using mongoose, and finally, the project was **deployed** on Heroku.![TravelAgency2](https://github.com/thiagohrcosta/TravelSite/blob/master/files/travelfix1.png?raw=true)
 
 ## Technologies - Frontend
 
